@@ -54,14 +54,9 @@
  }
 
  .widok1 {
-    width: 650px
-  
+    width: 650px 
 }
-.thumbnail {
-    width: 650px; /* Początkowy rozmiar zdjęcia */
-    transition: transform 0.3s ease; /* Płynne przejście */
-    cursor: pointer; /* Zmiana kursora na wskaźnik */
-}
+
     .widok2{
     width: 650px
  }
@@ -95,9 +90,8 @@
  </header>
  <section id="projekty">
     <div class="galeria">                              
-        <img src="widok1.jpg" class="widok1" class="thumbnail"/>
-
-                       
+        <img src="widok1.jpg" class="widok1"/>
+          
         <img src="widok2.jpg" class="widok2"/>
                         
         <img src="widok3.jpg" class="widok3"/>
@@ -112,13 +106,7 @@
     <br>
     <a href="index.html">Wróć do głównej strony</a>
 
-<script>
-    <script src="script.js">
-        const image = document.getElementById('widok1');
 
-    image.addEventListener('click', () => {
-    image.classList.toggle('enlarged');
-    </script>
  </script>
  </body>
 </html>
