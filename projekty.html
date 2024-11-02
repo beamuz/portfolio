@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf8">
+
+    link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Commissioner:wght@100..900&family=Gabarito:wght@400..900&family=Limelight&family=Oswald:wght@200..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+    
+<style>
+    * {
+    box-sizing: border-box;
+ }
+
+ body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f1; /* Delikatne tło */
+    color: #333;
+    text-align: center;
+    width: 100%;
+ }
+
+ header {
+    background: #4d3138; /* Burgundowy */
+    color: #f4f1e6; /* Jasny kolor tekstu */
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+ }
+
+ h1 {
+    display: inline;
+    text-align: center;
+    justify-content: space-evenly;
+    font-family: "Commissioner", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+    "slnt" 0,
+    "FLAR" 0,
+    "VOLM" 0;
+    font-size: 4em;
+ }
+
+ .galeria {                        
+    width: 650px
+    
+ }
+
+ .widok1 {
+    width: 650px
+  
+}
+.thumbnail {
+    width: 650px; /* Początkowy rozmiar zdjęcia */
+    transition: transform 0.3s ease; /* Płynne przejście */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+}
+    .widok2{
+    width: 650px
+ }
+ .widok3{
+   width: 650px
+ }
+ .widok4{
+   width: 650px
+ }
+ .widok5{
+   width: 650px
+ }
+
+#projekty{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    margin:0px
+    
+}
+</style>
+</head>
+
+<body>
+
+ <header>
+    <h1>Projekty</h1>         
+ </header>
+ <section id="projekty">
+    <div class="galeria">                              
+        <img src="widok1.jpg" class="widok1" class="thumbnail"/>
+
+                       
+        <img src="widok2.jpg" class="widok2"/>
+                        
+        <img src="widok3.jpg" class="widok3"/>
+                        
+        <img src="widok4.jpg" class="widok4"/>
+                 
+        <img src="widok5.jpg" class="widok5"/> 
+
+        <script src="script.js"></script> 
+    </div>        
+ </section>
+    <br>
+    <a href="portfolio.html">Wróć do głównej strony</a>
+
+<script>
+    <script src="script.js">
+        const image = document.getElementById('widok1');
+
+    image.addEventListener('click', () => {
+    image.classList.toggle('enlarged');
+    </script>
+ </script>
+ </body>
+</html>

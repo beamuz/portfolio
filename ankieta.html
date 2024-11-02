@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+       
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankieta-Projekty Wnętrz</title>
+    <script>
+        function submitSurvey() {
+            const answers = {
+                style: document.querySelector('input[name="style"]:checked')?.value,
+                color: document.querySelector('input[name="color"]:checked')?.value,
+                space: document.querySelector('input[name="space"]:checked')?.value,
+            };
+
+            if (!answers.style || !answers.color || !answers.space) {
+                alert("Proszę wypełnić wszystkie pytania!");
+                return;
+            }
+
+            localStorage.setItem('surveyAnswers', JSON.stringify(answers));
+
+            
+            window.location.href = "ankieta wyniki.html"; 
+        }
+    </script>
+</head>
+<body>
+    <h1>Jaki preferujesz styl wnetrza?</h1>
+    <form>
+        <h3>1. Jaki styl wnętrz preferujesz?</h3>
+        <label><input type="radio" name="style" value="nowoczesny"> Nowoczesny</label><br>
+        <label><input type="radio" name="style" value="klasyczny"> Klasyczny</label><br>
+        <label><input type="radio" name="style" value="skandynawski"> Skandynawski</label><br>
+
+        <h3>2. Jakie kolory preferujesz w wnętrzach?</h3>
+        <label><input type="radio" name="color" value="jasne"> Jasne</label><br>
+        <label><input type="radio" name="color" value="ciemne"> Ciemne</label><br>
+        <label><input type="radio" name="color" value="neutralne"> Neutralne</label><br>
+
+        <h3>3. Jakie pomieszczenie jest dla Ciebie najważniejsze?</h3>
+        <label><input type="radio" name="space" value="salon"> Salon</label><br>
+        <label><input type="radio" name="space" value="sypialnia"> Sypialnia</label><br>
+        <label><input type="radio" name="space" value="kuchnia"> Kuchnia</label><br>
+
+        <button type="button" onclick="submitSurvey()">Wyślij</button>
+    </form>
+ 
+    <p>
+        <a href="portfolio.html">Wróć do głównej strony</a>
+    </p>
+</body>
+
+</html>
